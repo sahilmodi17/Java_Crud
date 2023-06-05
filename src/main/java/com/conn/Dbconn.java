@@ -3,16 +3,16 @@ package com.conn;
 import java.sql.Connection;
 import java.sql.DriverManager;
 
-public class DbConn {
+public class Dbconn {
 	
-	private static Connection conn;
+	private static Connection conn=null;
 	
 	public static Connection getConnection()
 	{
 		
 		try {
-			Class.forName(null);
-			conn=DriverManager.getConnection(null);
+			Class.forName("com.mysql.cj.jdbc.Driver");
+			conn=DriverManager.getConnection("jdbc:mysql://localhost:3306/student","root","");
 			
 		}catch(Exception e) {
 			

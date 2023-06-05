@@ -6,15 +6,28 @@ public class Student {
 	private String fullName;
 	private String email;
 	private String contact;
+	private int age;
+	
 	public Student() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	public Student(String fullName, String email, String contact) {
+	public Student(String fullName, String email, String contact,int age) {
 		super();
 		this.fullName = fullName;
 		this.email = email;
 		this.contact = contact;
+		this.age = age;
+	}
+	
+	
+	public Student(int id, String fullName, String email, String contact, int age) {
+		super();
+		this.id = id;
+		this.fullName = fullName;
+		this.email = email;
+		this.contact = contact;
+		this.age = age;
 	}
 	public int getId() {
 		return id;
@@ -40,9 +53,17 @@ public class Student {
 	public void setContact(String contact) {
 		this.contact = contact;
 	}
+	
+	public int getAge() {
+		return age;
+	}
+	public void setAge(int age) {
+		this.age = age;
+	}
 	@Override
 	public String toString() {
-		return "Student [id=" + id + ", fullName=" + fullName + ", email=" + email + ", contact=" + contact + "]";
+		return "Student [id=" + id + ", fullName=" + fullName + ", email=" + email + ", contact=" + contact + ", age="
+				+ age + "]";
 	}
 	
 
